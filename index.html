@@ -68,11 +68,11 @@
 </head>
 <body>
   <script>
-    cons AS_URL_BASE = "https://script.google.com/macros/s/AKfycbyk6BrTTIrafby9R-frnHfyvgSyQrseIntsQeMGo2bFxmdNXJd_7zjEZWqojOKdiT72/exec"; //direrccion del servicio web de google scipts
-    
+    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbyk6BrTTIrafby9R-frnHfyvgSyQrseIntsQeMGo2bFxmdNXJd_7zjEZWqojOKdiT72/exec"; 
+  
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=")+2); //
-    
+  
     if(k){
       fetch(AS_URL_BASE+'?k='+k)
       .then(r=> r.text())
